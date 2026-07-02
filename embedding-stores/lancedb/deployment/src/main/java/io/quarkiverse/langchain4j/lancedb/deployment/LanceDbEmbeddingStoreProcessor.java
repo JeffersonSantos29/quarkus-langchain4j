@@ -60,6 +60,7 @@ class LanceDbEmbeddingStoreProcessor {
     @BuildStep
     void runtimeInitializedClasses(BuildProducer<RuntimeInitializedClassBuildItem> producer) {
         producer.produce(new RuntimeInitializedClassBuildItem("org.apache.arrow.memory.util.MemoryUtil"));
+        producer.produce(new RuntimeInitializedClassBuildItem("org.apache.arrow.memory.NettyAllocationManager"));
         producer.produce(new RuntimeInitializedClassBuildItem(
                 "com.fasterxml.jackson.module.jaxb.deser.DataHandlerJsonDeserializer"));
     }
